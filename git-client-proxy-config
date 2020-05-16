@@ -1,0 +1,53 @@
+This File Location: D:\Data&Files\CN\RTIS\RTIS-Files\Configuration\git-client-config
+
+
+git-proxy-issue-resolution:
+---------------------------
+
+Global proxy configuration:
+	Syntax:
+		git config --global http.proxy mySystemIP:@ProxyIP:ProxyPort
+		git config --global https.proxy mySystemIP:@ProxyIP:ProxyPort
+
+
+
+
+Console Issue Example:
+----------------------
+	Lenovo@DESKTOP-QVUA0UD MINGW64 ~/repo-test/fnizami
+	$ git clone https://github.com/fnizami/Hello-World.git
+	Cloning into 'Hello-World'...
+	fatal: unable to access 'https://github.com/fnizami/Hello-World.git/': Could not resolve host: github.com
+
+
+PyCharm Issue Example:
+	Test:	
+		unable to access 'https://github.com/fnizami/Hello-World.git/': Could not resolve host: github.com
+
+
+		
+
+Solution:
+---------
+	Lenovo@DESKTOP-QVUA0UD MINGW64 ~/repo-test/fnizami
+	$ git config --global http.proxy 10.64.10.135:@172.16.1.61:8080
+	$ git config --global https.proxy 10.64.10.135:@172.16.1.61:8080
+
+
+
+
+Console Example:
+---------------
+Lenovo@DESKTOP-QVUA0UD MINGW64 ~/repo-test/fnizami
+$ git clone https://github.com/fnizami/Hello-World.git
+Cloning into 'Hello-World'...
+remote: Enumerating objects: 25, done.
+remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 25
+Unpacking objects: 100% (25/25), done.
+
+
+PyCharm Example:
+	Test:
+		Connection to repository https://github.com/fnizami/Hello-World.git has been successful.
+	Clone works here...
+	
