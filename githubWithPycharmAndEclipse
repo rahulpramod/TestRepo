@@ -1,0 +1,20 @@
+Eclipse github Integration
+
+to export a project to github from eclipse, 
+ 1)	1st create a new repo in github and clone the empty repo(with gitbash) in a folder in computer
+ 2)	go to export in eclipse and select that local repo and stage(use ++ sign) and commit the changes and push to github
+ 
+	if you want to test by importing a java repo from github and test it by pushing it again to new repo,, then download/clone the repo into local and 
+	just cut the Project folder inside Repo and paste somewhere else and test it by
+	
+		Going to file_import project from folder_select the folder_right click on folder in package exploer_go to team and share project_select git
+		and follow steps 1,2 (select the local repo folder i.e. path until the repo names comes)
+		
+		
+		
+		
+Pycharm git config...
+
+	To import github repo, we clos current project and select check out from vcs and select git hub, enter github credentials,, enter github repo url and local repo folder.
+		It will create a local repo by itself. we can also use gitbash in that localrepo...
+		In pycharm we can modify and using vcs->git in menubar, we can add and commit and push..
